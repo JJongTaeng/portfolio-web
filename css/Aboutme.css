@@ -1,0 +1,96 @@
+.color-dodgerblue {
+  color: dodgerblue;
+}
+.italic {
+  font-style: italic;
+}
+.profile {
+  margin:4rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-description {
+  margin-left: 4rem;
+  width: 60%;
+}
+.profile-image-container{
+  width: 40%;
+}
+.profile-image {
+  margin-left: auto;
+  display: block;
+  border-radius: 50%;
+  border: 1px solid #999;
+  width: 20rem;
+  height: 20rem;
+  background-image: url("../images/profile.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* .profile-name {
+  margin-bottom: 2rem;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+
+} */
+
+.profile-header {
+  margin-bottom: 2rem;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size:1.4rem;
+  font-weight: bold;
+  color: #333;
+}
+.profile-simple-contents{
+  color: #666;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+.skill {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.skill-header{
+  display: flex;
+  align-items: center;
+}
+.use-tech {
+  width: 10%;
+  font-size: 1.5rem;
+  color: #666;
+  margin: 0 0 0 1rem;
+}
+.line {
+  height: 1px;
+  border-top: dashed 1px #999;
+  width: 90%;
+}
+.skills-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+.skills-item {
+  display: flex;
+  flex-direction: column;
+  margin:3rem;
+}
+.skills-item span{
+  display: block;
+  width: 10rem;
+  height: 10rem;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.skills-item p {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #666;
+  font-size: 1rem;
+  text-align: center;
+}

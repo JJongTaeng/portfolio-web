@@ -1,0 +1,49 @@
+.project-page {
+  max-width: 90%;
+  margin: 4rem auto 0 auto;
+}
+
+.project-header{
+  display: flex;
+  align-items: center;
+}
+.project-header-title {
+  width: 10%;
+  font-size: 1.5rem;
+  color: #666;
+}
+.card-list {
+  display:flex;
+  max-width: 90vw;
+  flex-wrap: wrap;
+}
+.card-item{
+  width: calc(33% - 6rem);
+  border-radius: 0.3rem;
+  margin: 3rem;
+  transition: 0.3s;
+}
+.card-item:hover{
+  box-shadow: 0px 10px 10px 10px rgba(200, 200, 200, 0.7);
+  transform: translateY(-1rem);
+}
+.card-image{
+  padding-bottom: 70%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card-bottom{
+  background:rgb(245, 245, 245);
+  padding: 2rem;
+}
+.card-title{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #666;
+}
+.card-description {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #666;
+}
