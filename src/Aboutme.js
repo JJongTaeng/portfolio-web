@@ -1,43 +1,7 @@
 import React from 'react'
 import '../css/Aboutme.css'
 
-const Aboutme = () =>{
-  const image =[
-    {
-      backgroundImage: "url('../images/html.png')",
-    },
-    {
-      backgroundImage: "url('../images/css.png')",
-    },
-    {
-      backgroundImage: "url('../images/javascript.png')",
-    },
-    {
-      backgroundImage: "url('../images/node.png')",
-    },
-    {
-      backgroundImage: "url('../images/webpack.png')",
-    },
-    {
-      backgroundImage: "url('../images/babel.png')",
-    },
-    {
-      backgroundImage: "url('../images/eslint.png')",
-    },
-    {
-      backgroundImage: "url('../images/react.png')",
-    },
-    {
-      backgroundImage: "url('../images/express.png')",
-    },
-    {
-      backgroundImage: "url('../images/mysql.png')",
-    },
-    {
-      backgroundImage: "url('../images/mongodb.png')",
-    },
-  ] 
-  
+const Aboutme = () =>{  
   return (
     <div className="profile-page">
       <section className="profile">
@@ -64,35 +28,35 @@ const Aboutme = () =>{
           </div>
           <div className="skills-list">
             <div className="skills-item HTML">
-              <span style={image[0]}></span>
+              <span></span>
               <p>HTML5</p>
             </div>
             <div className="skills-item CSS">
-              <span style={image[1]}></span>
+              <span></span>
               <p>CSS3</p>
             </div>
             <div className="skills-item JS">
-              <span style={image[2]}></span>
+              <span></span>
               <p>JavaScript</p>
             </div>
             <div className="skills-item Node">
-              <span style={image[3]}></span>
+              <span></span>
               <p>NodeJS</p>
             </div>
             <div className="skills-item Webpack">
-              <span style={image[4]}></span>
+              <span></span>
               <p>Webpack</p>
             </div>
             <div className="skills-item Babel">
-              <span style={image[5]}></span>
+              <span></span>
               <p>Babel</p>
             </div>
             <div className="skills-item Eslint">
-              <span style={image[6]}></span>
+              <span></span>
               <p>Eslint</p>
             </div>
             <div className="skills-item React">
-              <span style={image[7]}></span>
+              <span></span>
               <p>React</p>
             </div>
           </div>
@@ -104,20 +68,20 @@ const Aboutme = () =>{
           </div>
           <div className="skills-list">
             <div className="skills-item Node">
-              <span style={image[3]}></span>
-              <p></p>
+              <span></span>
+              <p>NodeJS</p>
             </div>
             <div className="skills-item Express">
-              <span style={image[8]}></span>
-              <p></p>
+              <span></span>
+              <p>express</p>
             </div>
             <div className="skills-item MySQL">
-              <span style={image[9]}></span>
-              <p></p>
+              <span></span>
+              <p>MySQL</p>
             </div>
             <div className="skills-item MongoDB">
-              <span style={image[10]}></span>
-              <p></p>
+              <span></span>
+              <p>MongoDB</p>
             </div>
           </div>
         </div>

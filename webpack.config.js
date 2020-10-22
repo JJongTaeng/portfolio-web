@@ -2,9 +2,9 @@ const {CleanWebpackPlugtin, CleanWebpackPlugin} = require('clean-webpack-plugin'
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack')
-
+const mode = process.env.NODE_ENV ? "production" : "development";
 module.exports = {
-  mode: 'development',
+  mode: mode,
   entry: {
     main: "./src/index.js"
   },
@@ -29,10 +29,14 @@ module.exports = {
       },
       {
         test: /\.(jpg|png|svg|gif)$/,
-        loader: 'file-loader',
-        options: {
-          name:"[name].[ext]?[hash]",
-        },
+        use:{
+          loader: 'url-loader',
+          options: {
+            publicPath:'./',
+            name:"[name].[ext]?[hash]",
+            limit: 10000000,
+          },
+        }
       },
     ]
   },

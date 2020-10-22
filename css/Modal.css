@@ -1,0 +1,16 @@
+.modal-page {
+  position: absolute;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+  overflow: scroll;
+  max-width: 90vw;
+  margin: 0 auto;
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+.modal-page::-webkit-scrollbar {
+  display: none;
+}

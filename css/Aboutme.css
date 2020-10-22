@@ -94,3 +94,40 @@
   font-size: 1rem;
   text-align: center;
 }
+
+
+
+
+.HTML span {
+  background-image: url("../images/html.png");
+}
+.CSS span {
+  background-image: url("../images/css.png");
+}
+.JS span {
+  background-image: url("../images/javascript.png");
+}
+.Node span {
+  background-image: url("../images/node.png");
+}
+.Webpack span {
+  background-image: url("../images/webpack.png");
+}
+.Babel span {
+  background-image: url("../images/babel.png");
+}
+.Eslint span {
+  background-image: url("../images/eslint.png");
+}
+.React span {
+  background-image: url("../images/react.png");
+}
+.Express span {
+  background-image: url("../images/express.png");
+}
+.MySQL span {
+  background-image: url("../images/mysql.png");
+}
+.MongoDB span {
+  background-image: url("../images/mongodb.png");
+}
