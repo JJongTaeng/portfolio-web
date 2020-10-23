@@ -13,7 +13,7 @@
     width:100vw;
     height: 100vh;
     opacity: 1;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(255, 255, 255);
   }
 }
 @keyframes button-open {

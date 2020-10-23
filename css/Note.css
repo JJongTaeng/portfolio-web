@@ -16,7 +16,7 @@
 
 }
 .Note-link a{
-  color: dodgerblue;
+  color: #666;
   text-decoration: none;
   font-size: calc(0.5rem + 2vw);
   font-weight: bold;
@@ -26,7 +26,7 @@
   margin-top : 2rem;
 }
 .Note-link a:hover{
-  color: crimson;
+  color: dodgerblue;
 }
 .note-image1{
   background-image: url("../images/note1.png");
