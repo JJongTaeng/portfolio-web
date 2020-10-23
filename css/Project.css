@@ -51,7 +51,6 @@
   align-items: center;
 }
 .project-header-title {
-  width: 10%;
   font-size: 1.5rem;
   color: #666;
   font-family: 'Noto Sans KR', sans-serif;
@@ -107,4 +106,18 @@
 }
 .card-image.responsive {
   background-image: url("../images/responsive.png");
+}
+
+@media(max-width: 1024px){
+  .card-item{
+    margin: 2rem;
+    width: calc(50% - 4rem);
+  }
+}
+
+@media(max-width: 600px){
+  .card-item {
+    margin: 2rem;
+    width: calc(100% - 4rem);
+  }
 }

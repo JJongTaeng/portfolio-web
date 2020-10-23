@@ -17,7 +17,17 @@
   background-repeat: no-repeat;
   animation: image 2.5s forwards;
 }
-
+.Instagram-link a{
+  display: block;
+  margin-bottom : 4rem 0 2rem 4rem;
+  color: dodgerblue;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.Instagram-link a:hover{
+  color: crimson;
+}
 .image1{
   background-image: url("../images/1.png");
 }
@@ -53,4 +63,10 @@
 }
 .image12{
   background-image: url("../images/12.png");
+}
+
+@media (max-width: 1024px) {
+  .Instagram-image{
+    height: 50vw;
+  }
 }

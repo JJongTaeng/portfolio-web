@@ -1,0 +1,103 @@
+.business-card-page {
+  max-width: 60vw;
+  height: 30vw;
+  margin: 5rem auto;
+  display:flex;
+  background: rgb(245, 245, 245);
+}
+.business-card-left{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  height: 100%;
+}
+.business-left-image {
+  width: 100%;
+  height: 70%;
+  margin:auto;
+  background-image: url('../images/business.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 2rem;
+}
+.business-left-description{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 20%
+}
+
+.business-left-description p {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #999;
+
+}
+.business-card-right {
+  display:flex;
+  flex-direction: column;
+  width: 65%;
+  padding-left: 4rem;
+}
+.business-right-header {
+  margin-top: 2rem;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: dodgerblue;
+}
+.business-right-name{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1.4rem;
+  display:flex;
+  color: #666;
+  margin-top: 1rem;
+}
+.korean:before{
+  content: '🤵🏻';
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+.korean {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #666;
+  margin-right : 2rem;
+}
+.eng {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #666;
+  color: #999;
+}
+.business-right-phone:before{
+  content: '☎';
+  margin-right: 1rem;
+  color:#999;
+}
+.business-right-phone{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #666;
+  margin-top: 1rem;
+}
+.business-right-mail:before {
+  content: "✉";
+  margin-right: 1rem;
+  color:#999;
+}
+.business-right-mail{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.business-right-description{
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #999;
+  margin-top: 4rem;
+}

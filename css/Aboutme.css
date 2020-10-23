@@ -8,12 +8,13 @@
   margin:4rem 0;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 .profile-description {
   margin-left: 4rem;
-  width: 60%;
+  width: calc(60% - 4rem);
 }
 .profile-image-container{
   width: 40%;
@@ -60,7 +61,8 @@
 }
 .use-tech {
   width: 10%;
-  font-size: 1.5rem;
+  font-weight: bold;
+  font-size: calc(0.5rem + 0.8vw);
   color: #666;
   margin: 0 0 0 1rem;
 }
@@ -130,4 +132,25 @@
 }
 .MongoDB span {
   background-image: url("../images/mongodb.png");
+}
+
+@media (max-width: 800px) {
+  .profile-description {
+    width: 100%;
+  }
+  .profile-image-container{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .profile-image {
+    margin: 0;
+  }
+  .skills-list {
+    justify-content: center;
+  }
+  .profile-simple-contents{
+    font-size: calc(0.5rem + 1vw);
+  }
 }

@@ -3,6 +3,10 @@ import '../css/Instagram.css'
 const Instagram = () => {
   return(
     <div className="Instagram-list">
+      <div className="Instagram-link">
+        <a href="https://github.com/JJongTaeng/personal-clone-insta" target="_blank">git - Instagram</a>
+        <a href="http://13.125.61.188:8080/" target="_blank">Webpage : Instagram</a>
+      </div>
       <div className="Instagram-image image1"></div>
       <div className="Instagram-image image2"></div>
       <div className="Instagram-image image3"></div>
