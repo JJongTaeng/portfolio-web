@@ -136,7 +136,12 @@
 
 @media (max-width: 800px) {
   .profile-description {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    margin: 0;
   }
   .profile-image-container{
     display:flex;

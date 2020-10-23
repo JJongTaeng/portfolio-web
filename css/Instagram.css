@@ -17,13 +17,21 @@
   background-repeat: no-repeat;
   animation: image 2.5s forwards;
 }
+.Instagram-link{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
 .Instagram-link a{
-  display: block;
-  margin-bottom : 4rem 0 2rem 4rem;
   color: dodgerblue;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: calc(0.5rem + 2vw);
   font-weight: bold;
+  animation: image 2.5s forwards;
+}
+.Instagram-link a:nth-child(1){
+  margin-top : 2rem;
 }
 .Instagram-link a:hover{
   color: crimson;

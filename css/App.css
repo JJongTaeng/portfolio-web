@@ -230,4 +230,7 @@
     font-size: calc(0.5rem + 3vw);
     padding-top: calc(5px + 2vw);
   }
+  .header {
+    width: 100vw;
+  }
 }

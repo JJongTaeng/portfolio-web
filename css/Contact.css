@@ -32,7 +32,7 @@
 .business-left-description p {
   font-family: 'Noto Sans KR', sans-serif;
   color: #999;
-
+  font-size: calc(0.5rem + 0.5vw);
 }
 .business-card-right {
   display:flex;
@@ -44,30 +44,30 @@
   margin-top: 2rem;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: calc(0.5rem + 1vw);
   color: dodgerblue;
 }
 .business-right-name{
   font-family: 'Noto Sans KR', sans-serif;
-  font-size: 1.4rem;
+  font-size: calc(0.5rem + 1vw);
   display:flex;
   color: #666;
   margin-top: 1rem;
 }
 .korean:before{
   content: '🤵🏻';
-  font-size: 1rem;
+  font-size: calc(0.5rem + 1vw);
   margin-right: 1rem;
 }
 .korean {
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: calc(0.5rem + 1vw);
   color: #666;
   margin-right : 2rem;
 }
 .eng {
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: calc(0.5rem + 1vw);
   color: #666;
   color: #999;
 }
@@ -79,7 +79,7 @@
 .business-right-phone{
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: calc(0.5rem + 1vw);
   color: #666;
   margin-top: 1rem;
 }
@@ -91,7 +91,7 @@
 .business-right-mail{
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: bold;
-  font-size: 1.4rem;
+  font-size: calc(0.5rem + 1vw);
   color: #666;
   margin-top: 1rem;
 }
@@ -99,5 +99,28 @@
 .business-right-description{
   font-family: 'Noto Sans KR', sans-serif;
   color: #999;
+  font-size: calc(0.5rem + 0.5vw);
   margin-top: 4rem;
+}
+
+@media (max-width: 1000px) {
+  .business-right-description{
+    margin: 1rem;
+  }
+  .business-right-mail{
+    margin-top: 0.5rem;
+  }
+  .business-right-phone{
+    margin-top: 0.5rem;
+  }
+  .business-right-name{
+    margin-top: 0.5rem;
+  }
+  .business-right-header{
+    margin-top: 1rem;
+  }
+  .business-card-page{
+    max-width: 90vw;
+    height: 45vw;
+  }
 }
