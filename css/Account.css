@@ -1,34 +1,3 @@
-.account-list {
-  width: 100%;
-}
-.account-image {
-  width: 100%;
-  height: 56.25vw;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: image 2.5s forwards;
-}
-.account-link{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-}
-.account-link a{
-  margin-left: 2rem;
-  color: #666;
-  text-decoration: none;
-  font-size: calc(0.5rem + 2vw);
-  font-weight: bold;
-  animation: image 2.5s forwards;
-}
-.account-link a:nth-child(1){
-  margin-top : 2rem;
-}
-.account-link a:hover{
-  color: dodgerblue;
-}
 .account-image1{
   background-image: url("../images/account1.png");
 }

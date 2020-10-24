@@ -1,76 +1,37 @@
-@keyframes image {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.Instagram-list {
-  width: 100%;
-}
-.Instagram-image {
-  width: 100%;
-  height: 56.25vw;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: image 2.5s forwards;
-}
-.Instagram-link{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-}
-.Instagram-link a{
-  margin-left: 2rem;
-  color: #666;
-  text-decoration: none;
-  font-size: calc(0.5rem + 2vw);
-  font-weight: bold;
-  animation: image 2.5s forwards;
-}
-.Instagram-link a:nth-child(1){
-  margin-top : 2rem;
-}
-.Instagram-link a:hover{
-  color: dodgerblue;
-}
-.image1{
+.instagram-image1{
   background-image: url("../images/1.png");
 }
-.image2{
+.instagram-image2{
   background-image: url("../images/2.png");
 }
-.image3{
+.instagram-image3{
   background-image: url("../images/3.png");
 }
-.image4{
+.instagram-image4{
   background-image: url("../images/4.png");
 }
-.image5{
+.instagram-image5{
   background-image: url("../images/5.png");
 }
-.image6{
+.instagram-image6{
   background-image: url("../images/6.png");
 }
-.image7{
+.instagram-image7{
   background-image: url("../images/7.png");
 }
-.image8{
+.instagram-image8{
   background-image: url("../images/8.png");
 }
-.image9{
+.instagram-image9{
   background-image: url("../images/9.png");
 }
-.image10{
+.instagram-image10{
   background-image: url("../images/10.png");
 }
-.image11{
+.instagram-image11{
   background-image: url("../images/11.png");
 }
-.image12{
+.instagram-image12{
   background-image: url("../images/12.png");
 }
 

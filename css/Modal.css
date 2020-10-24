@@ -14,3 +14,42 @@
 .modal-page::-webkit-scrollbar {
   display: none;
 }
+@keyframes image {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.project-list {
+  width: 100%;
+}
+.project-image {
+  width: 100%;
+  height: 56.25vw;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: image 2.5s forwards;
+}
+.project-link{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+.project-link a{
+  margin-left: 2rem;
+  color: #666;
+  text-decoration: none;
+  font-size: calc(0.5rem + 2vw);
+  font-weight: bold;
+  animation: image 2.5s forwards;
+}
+.project-link a:nth-child(1){
+  margin-top : 2rem;
+}
+.project-link a:hover{
+  color: dodgerblue;
+}

@@ -1,34 +1,3 @@
-.Note-list {
-  width: 100%;
-}
-.Note-image {
-  width: 100%;
-  height: 56.25vw;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: image 2.5s forwards;
-}
-.Note-link{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-}
-.Note-link a{
-  margin-left: 2rem;
-  color: #666;
-  text-decoration: none;
-  font-size: calc(0.5rem + 2vw);
-  font-weight: bold;
-  animation: image 2.5s forwards;
-}
-.Note-link a:nth-child(1){
-  margin-top : 2rem;
-}
-.Note-link a:hover{
-  color: dodgerblue;
-}
 .note-image1{
   background-image: url("../images/note1.png");
 }
