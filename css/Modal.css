@@ -5,7 +5,7 @@
   left:0;
   bottom:0;
   overflow: scroll;
-  max-width: 90vw;
+  max-width: 100%;
   margin: 0 auto;
   -ms-overflow-style: none; 
   scrollbar-width: none; 

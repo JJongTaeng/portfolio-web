@@ -5,7 +5,7 @@ const Instagram = () => {
     <div className="Instagram-list">
       <div className="Instagram-link">
         <a href="https://github.com/JJongTaeng/personal-clone-insta" target="_blank">git - Instagram</a>
-        <a href="http://13.125.61.188:8080/" target="_blank">Webpage : Instagram</a>
+        <a href="http://13.125.61.188:8080/" target="_blank">Webpage : Instagram (id: jointae / pwd: 0000)</a>
       </div>
       <div className="Instagram-image image1"></div>
       <div className="Instagram-image image2"></div>
