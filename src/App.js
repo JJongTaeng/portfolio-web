@@ -4,7 +4,7 @@ import '../css/default.css';
 import Aboutme from './Aboutme';
 import Project from './Project';
 import Contact from './Contact';
-
+import Posts from './Posts';
 const App = () => {
   const [index, setIndex] = useState(1);
   return (
@@ -39,15 +39,19 @@ const App = () => {
         <div className="button project" onClick={
           ()=>setIndex(2)
         }>Projects</div>
-        <div className="button contact" onClick={
+        <div className="button Posts" onClick={
           ()=>setIndex(3)
+        }>Posts</div>
+        <div className="button contact" onClick={
+          ()=>setIndex(4)
         }>contact</div>
       </section>
       <section className="contents">
         {
           index === 1 ? 
           <Aboutme></Aboutme> : (index===2) ? 
-          <Project></Project> : <Contact></Contact>
+          <Project></Project> : (index===3) ?
+          <Posts></Posts> : <Contact></Contact>
         }
       </section>
       <footer className="footer">
