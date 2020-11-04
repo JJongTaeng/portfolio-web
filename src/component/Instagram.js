@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Instagram.css'
+import '../../css/Instagram.css'
 const Instagram = () => {
   return(
     <div className="project-list">

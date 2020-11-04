@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Apple.css'
+import '../../css/Apple.css'
 
 const Apple = () => {
   return (

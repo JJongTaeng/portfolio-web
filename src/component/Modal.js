@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import '../css/Modal.css';
+import '../../css/Modal.css';
 import Instagram from './Instagram';
 import Note from './Note';
 import Account from './Account';

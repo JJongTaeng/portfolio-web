@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Responsive.css'
+import '../../css/Responsive.css'
 const Responsive = () => {
   return(
     <div className="project-list">

@@ -1,10 +1,9 @@
 import React, {useState} from 'react';
 import '../css/App.css';
 import '../css/default.css';
-import Aboutme from './Aboutme';
-import Project from './Project';
-import Contact from './Contact';
-import Posts from './Posts';
+import Aboutme from './component/Aboutme';
+import Project from './component/Project';
+import Contact from './component/Contact';
 const App = () => {
   const [index, setIndex] = useState(1);
   return (
@@ -19,7 +18,7 @@ const App = () => {
             <span className="e">e</span>
             <span className="x">'</span>
             <span className="s">s</span>
-            <span className="p"> P</span>
+            <span className="p">P</span>
             <span className="o">o</span>
             <span className="r">r</span>
             <span className="t">t</span>
@@ -39,19 +38,15 @@ const App = () => {
         <div className="button project" onClick={
           ()=>setIndex(2)
         }>Projects</div>
-        <div className="button Posts" onClick={
-          ()=>setIndex(3)
-        }>Posts</div>
         <div className="button contact" onClick={
-          ()=>setIndex(4)
+          ()=>setIndex(3)
         }>contact</div>
       </section>
       <section className="contents">
         {
           index === 1 ? 
           <Aboutme></Aboutme> : (index===2) ? 
-          <Project></Project> : (index===3) ?
-          <Posts></Posts> : <Contact></Contact>
+          <Project></Project> : <Contact></Contact>
         }
       </section>
       <footer className="footer">
