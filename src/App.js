@@ -4,9 +4,15 @@ import '../css/default.css';
 import Aboutme from './component/Aboutme';
 import Project from './component/Project';
 import Contact from './component/Contact';
+import Blog from './component/Blog'
+import { Route, Link } from 'react-router-dom';
 const App = () => {
   const [index, setIndex] = useState(1);
   return (
+    <div>
+
+    
+    <Route exact={true} path='/' render={()=>
     <div>
       <section className="header">
         <div className="header-text">
@@ -38,6 +44,7 @@ const App = () => {
         <div className="button project" onClick={
           ()=>setIndex(2)
         }>Projects</div>
+        <Link to="/blog" className="button project">Blog</Link>
         <div className="button contact" onClick={
           ()=>setIndex(3)
         }>contact</div>
@@ -54,7 +61,10 @@ const App = () => {
         <p className="made-by">made by JJongTaeng</p>
       </footer>
     </div>
+    }></Route>
+    <Route path='/blog' component={Blog}></Route>
+    </div>
    )
 }
 
-export default App
+export default App;

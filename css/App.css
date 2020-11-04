@@ -165,8 +165,9 @@
   display: inline-block;
   animation: l 2s forwards;
 }
-.body{
+body{
   overflow-x: hidden;
+  margin: 0;
 }
 .header{
   display: flex;
@@ -200,6 +201,7 @@
   font-style: italic;
   cursor:pointer;
   transition: 0.5s;
+  text-decoration: none;
 }
 
 .button:hover {

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/default.css">
+</head>
+<style>
+
+.blog-page {
+  width: calc(100vw - 19px);
+  background: rgb(250,250,250);
+}
+.blog-nav {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: 6rem;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  background: rgb(250,250,250);
+}
+.blog-nav div {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.blog-header-name {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #666;
+  font-weight: 200;
+  letter-spacing: 0.3rem;
+}
+.blog-search-box {
+  
+  width: calc(5rem + 10vw);
+  height: 2rem;
+  border: 0;
+  border-radius: 0.2rem;
+  background: white;
+  margin-left: auto;
+}
+.blog-search-submit {
+  width: 3rem;
+  height: 2rem;
+  border: 0;
+  border-radius: 0.2rem;
+  background: darkturquoise;
+}
+.blog-middle-top {
+  max-width: 1000px;
+  margin: 0 auto;
+  display:flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.blog-count p{
+  margin: 0 1rem;
+  font-size: 0.8rem;
+  color: #999;
+
+}
+.blog-late-date p {
+  font-size: 0.8rem;
+  color: #999;
+}
+.blog-description{
+  margin: 1rem auto 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: #666;
+  letter-spacing: 0.2rem;
+}
+.blog-middle {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.blog-middle-header{
+  display:flex;
+  align-items: center;
+  margin: 3rem 0;
+}
+.blog-middle-header p {
+  margin: 0 1rem;
+  font-weight: 100;
+  font-size: 1.5rem;
+  color: #666;
+}
+.pin {
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+.blog-post-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+.blog-post-items {
+  width: calc((100vw - 19px) / 3);
+  height: 33vw;
+  background: #ddd;
+}
+
+</style>
+<body>
+  <div class="blog-page">
+    <nav class='blog-nav'>
+      <div>
+        <a to='/' class="blog-header-name">쫑탱</a>
+        <input type="search" class="blog-search-box"/>
+        <input type="submit" value="검색" class="blog-search-submit"/>
+      </div>
+    </nav>
+    <div class="blog-middle-top">
+      <div class="blog-description">배워가는 과정을 기록하고 있습니다.</div>
+      <div class="blog-count">
+        <p>발행 포스트</p>
+        <span></span>
+      </div>
+      <div class="blog-late-date">
+        <p>최근 업로드</p>
+        <span>2020.11.04</span>
+      </div>
+    </div>
+    <div class="blog-middle">
+      <div class="blog-middle-header">
+        <div class="pin"></div>
+        <p>포스트</p>
+        <div class="pin"></div>
+      </div>
+      <div class="blog-post-list">
+        <div class="blog-post-items blog-post-1"></div>
+        <div class="blog-post-items blog-post-2"></div>
+        <div class="blog-post-items blog-post-3"></div>
+        <div class="blog-post-items blog-post-4"></div>
+        <div class="blog-post-items blog-post-5"></div>
+        <div class="blog-post-items blog-post-6"></div>
+        <div class="blog-post-items blog-post-7"></div>
+        <div class="blog-post-items blog-post-8"></div>
+        <div class="blog-post-items blog-post-9"></div>
+        <div class="blog-post-items blog-post-10"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
