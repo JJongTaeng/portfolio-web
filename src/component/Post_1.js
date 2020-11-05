@@ -20,6 +20,8 @@ const Post_1 = ({post}) => {
   const Image2 = styled.div`
   background-image: url('${content.images[1]}');
   `
+
+
   return(
     <div className="post-page">
       <div className="post-header">
@@ -49,6 +51,7 @@ const Post_1 = ({post}) => {
         </div>
         <div className="post-right-list">
           <ul className="post-ul-list">
+            <span className="post-dodgerblue">목록</span>
             <li className="post-list-link">
               <a href="#1">{content.list[0]}</a>
             </li>
@@ -64,7 +67,19 @@ const Post_1 = ({post}) => {
           </ul>
         </div>
       </div>
-      <Link to='/blog' className="post-back">목록으로 가기</Link>
+      <div className="post-tag-list">
+        <p className="post-list-link">@태그 : </p>
+        {post[0].tag.map((param)=>{
+          return ( 
+            <div className='post-tag-item'>
+              <p>{param}</p>
+            </div>
+          )
+        })}
+      </div>
+      <Link to='/blog' onClick={()=>{
+            window.scrollTo(0,0);
+          }} className="post-back">목록으로 가기</Link>
     </div>
   )
 }

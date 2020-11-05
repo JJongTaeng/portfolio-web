@@ -1,13 +1,36 @@
 import React from 'react';
 import '../../css/Blog.css'
 import {Route, Link} from 'react-router-dom'
+import styled from 'styled-components';
 import Post_1 from './Post_1';
 const Blog = () => {
   const post = [
     {
-      title: 'React + Webpack + babel로 포트폴리오 웹 만들기!!!!'
-    }
+      title: 'React + Webpack + babel로 포트폴리오 웹 만들기!!!!',
+      date: '2020.11.05',
+      tag: ['react','portfolio'],
+      image: "/post-1.png",
+      link: '/blog/1',
+    },
   ]
+
+  const Tag = styled.div`
+    display:flex;
+    align-items: center;
+    & p {
+      margin-right: 1rem;
+    }
+    & p:before {
+      content: '@';
+    }
+    & span {
+      margin-right: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: white;
+    }
+  `
+
   return (
     <div className="blog-page">
       <nav className='blog-nav'>
@@ -26,11 +49,11 @@ const Blog = () => {
       <div className="blog-description">주니어 개발자로서 성장하는 과정을 기록하고 있습니다.</div>
       <div className="blog-count">
         <p>발행 포스트</p>
-        <span>00</span>
+        <span>{post.length}</span>
       </div>
       <div className="blog-late-date">
         <p>최근 업로드</p>
-        <span>2020.11.04</span>
+        <span>{post[post.length-1].date}</span>
       </div>
     </div>
     <div className="blog-middle">
@@ -40,11 +63,31 @@ const Blog = () => {
         <div className="pin"></div>
       </div>
       <div className="blog-post-list">
-        <div className="blog-post-items blog-post-1">
-          <Link to="/blog/1" className="blog-post-back back-1">
-            <p>{post[0].title}</p>
+      {post.map((elem, index, all)=>{
+        const PostItem = styled.div`
+          width: calc(1200px / 3);
+          height: calc(1200px / 3);
+          background-image: url('./blog${elem.image}');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        `
+        return (
+        <PostItem>
+          <Link to={elem.link} onClick={()=>{
+            window.scrollTo(0,0);
+          }} className="blog-post-back back-1">
+            <p>{post[index].title}</p>
+            <Tag>
+              <p>TAG :</p>
+              {post[index].tag.map((param)=>{
+                return (<span>{param} /</span>)
+              })}
+            </Tag>
           </Link>
-        </div>
+        </PostItem>
+      )
+      })}
       </div>
     </div></div>
       }></Route>

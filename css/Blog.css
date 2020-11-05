@@ -102,12 +102,10 @@
   margin: auto;
   align-items: center;
 }
-.blog-post-items {
-  width: calc(1200px / 3);
-  height: calc(1200px / 3);
-}
+
 .blog-post-back{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-decoration: none;
@@ -116,6 +114,9 @@
   width: calc(1200px / 3);
   height: calc(1200px / 3);
   transition: 0.5s;
+}
+.blog-post-back p {
+  margin: 1rem 0;
 }
 .blog-post-back:hover {
   opacity: 1;
@@ -150,13 +151,16 @@
 
 
 /* ================포스트 css */
-
+/* .blog-post-items {
+  width: calc(1200px / 3);
+  height: calc(1200px / 3);
+}
 .blog-post-1{
   background-image: url("../images/post-1.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 .blog-post-back p{
   font-weight: bold;
   font-size: 1.2rem;

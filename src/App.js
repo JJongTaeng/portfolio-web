@@ -42,7 +42,9 @@ const App = () => {
         <div className="button project" onClick={
           ()=>setIndex(2)
         }>Projects</div>
-        <Link to="/blog" className="button project">Blog</Link>
+        <Link to="/blog" onClick={()=>{
+            window.scrollTo(0,0);
+          }} className="button project">Blog</Link>
         <div className="button contact" onClick={
           ()=>setIndex(3)
         }>contact</div>

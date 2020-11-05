@@ -30,11 +30,44 @@
   text-decoration: none;
 }
 .post-ul-list {
+  position: sticky;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  right: 0;
+  top: 8rem;
   font-size: 1rem;
   width: 100%;
 }
-.post-right-list {
-
+.post-ul-list span {
+  
+}
+.post-right-list .post-list-link{
+  margin: 0.5rem 0;
+  font-weight: 400;
+}
+.post-tag-list {
+  display: flex;
+  margin-bottom: 3rem;
+}
+.post-tag-list > p {
+  margin:0;
+  padding: 0.5rem;
+  flex-shrink: 0;
+}
+.post-tag-item{
+  display:flex;
+  justify-content: center;
+  border-radius: 1rem;
+  align-items: center;
+  margin: 0 1rem;
+  width: 150px;
+  height: 50px;
+  background: #eee;
+}
+.post-tag-item p {
+  font-size: 1.5rem;
+  color: #666;
 }
 /* 각각 부분별 css */
 
@@ -53,7 +86,7 @@
 .post-image {
   margin: 2rem 0;
   width: 100%;
-  height: 440px;
+  height: 28vw;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -62,7 +95,7 @@
   color: #666;
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 1rem 0;
+  margin: 3rem 0 1rem 0;
 }
 .post-content-descrition {
   color: #666;
@@ -73,7 +106,7 @@
   color: #666;
   padding-bottom: 0.3rem;
   border-bottom: 1px solid #bbb;
-  margin: 2rem 0 ;
+  margin: 2rem 1rem ;
 }
 .post-back::before{
   content:'⟵';
