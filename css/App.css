@@ -209,13 +209,16 @@ body{
   transform: translateY(-0.3rem);
 }
 .footer {
-  height: 5rem;
-  margin:auto;
+  height: 10rem;
+  margin-top:12rem;
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   background: rgb(240, 240, 240);
+}
+.footer p {
+  border-bottom: 1px solid white;
 }
 .git, .made-by {
   margin-top: 1rem;
