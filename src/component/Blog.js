@@ -1,11 +1,40 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../../css/Blog.css'
 import {Route, Link} from 'react-router-dom'
 import styled from 'styled-components';
+
+
 import Post_1 from './Post_1';
+import Post_2 from './Post_2';
 const Blog = () => {
-  const post = [
+  const [tagData, setTagData] = useState('');
+  const [post, setPost] = useState([
     {
+      id: 2,
+      title: 'CRA 없이 리액트 개발환경 구현하기!!!!',
+      date: '2020.11.06',
+      tag: ['react', 'webpack','babel'],
+      image: "/post-2.png",
+      link: '/blog/2'
+    },
+    { id: 1,
+      title: 'React + Webpack + babel로 포트폴리오 웹 만들기!!!!',
+      date: '2020.11.05',
+      tag: ['react','portfolio'],
+      image: "/post-1.png",
+      link: '/blog/1',
+    },
+  ])
+  const basicPost = [
+    {
+      id: 2,
+      title: 'CRA 없이 리액트 개발환경 구현하기!!!!',
+      date: '2020.11.06',
+      tag: ['react', 'webpack','babel'],
+      image: "/post-2.png",
+      link: '/blog/2'
+    },
+    { id: 1,
       title: 'React + Webpack + babel로 포트폴리오 웹 만들기!!!!',
       date: '2020.11.05',
       tag: ['react','portfolio'],
@@ -13,7 +42,7 @@ const Blog = () => {
       link: '/blog/1',
     },
   ]
-
+  const onChangeTagData = e => setTagData(e.target.value);
   const Tag = styled.div`
     display:flex;
     align-items: center;
@@ -30,6 +59,22 @@ const Blog = () => {
       color: white;
     }
   `
+  const onClick = () => {
+    if(!tagData) {
+      setPost(basicPost);
+      setTagData('');
+      return;
+    }
+    const newPost = post.filter((elem, index, all)=>{
+      return elem.tag.includes(tagData);
+    })
+    if(!newPost) return;
+    setPost(newPost);
+    setTagData('');
+  }
+  const onKeyPress = e => {
+    if(e.key==='Enter') onClick();
+  }
 
   return (
     <div className="blog-page">
@@ -40,8 +85,8 @@ const Blog = () => {
             <Link to="/" className="blog-header-link">소개</Link>
             <a href="https://github.com/jjongtaeng" className="blog-header-link">깃허브</a>
           </div>
-          <input type="search" className="blog-search-box"/>
-          <input type="submit" value="검색" className="blog-search-submit"/>
+          <input type="search" value={tagData}  onKeyPress={onKeyPress} onChange={onChangeTagData} placeholder="태그이름 검색" className="blog-search-box"/>
+          <input type="submit" onClick={onClick} value="검색" className="blog-search-submit"/>
         </div>
       </nav>
       <Route path='/blog'exact={true} render={()=><div>
@@ -53,7 +98,7 @@ const Blog = () => {
       </div>
       <div className="blog-late-date">
         <p>최근 업로드</p>
-        <span>{post[post.length-1].date}</span>
+        <span>{post[0].date}</span>
       </div>
     </div>
     <div className="blog-middle">
@@ -65,19 +110,21 @@ const Blog = () => {
       <div className="blog-post-list">
       {post.map((elem, index, all)=>{
         const PostItem = styled.div`
-          width: calc(1200px / 3);
-          height: calc(1200px / 3);
+          width: calc(1170px / 3);
+          height: calc(1170px / 3);
           background-image: url('./blog${elem.image}');
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
         `
         return (
+        <div className="hover-scale">
         <PostItem>
           <Link to={elem.link} onClick={()=>{
             window.scrollTo(0,0);
           }} className="blog-post-back back-1">
-            <p>{post[index].title}</p>
+            <p className="blog-post-back-title">{elem.title}</p>
+            <p className="blog-post-back-date">{elem.date}</p>
             <Tag>
               <p>TAG :</p>
               {post[index].tag.map((param)=>{
@@ -85,13 +132,14 @@ const Blog = () => {
               })}
             </Tag>
           </Link>
-        </PostItem>
+        </PostItem></div>
       )
       })}
       </div>
     </div></div>
       }></Route>
       <Route path="/blog/1" render={()=><Post_1 post={post}/>}></Route>
+      <Route path="/blog/2" render={()=><Post_2 post={post}/>}></Route>
       <footer className="footer">
         <p className="git">github : <a href="https://github.com/JJongTaeng">Welcome JJongTaeng's github</a></p>
         <p className="made-by">made by JJongTaeng</p>

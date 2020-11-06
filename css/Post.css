@@ -72,7 +72,7 @@
 /* 각각 부분별 css */
 
 .post-code-box {
-  background: #ddd;
+  background: #eee;
   color: #333;
   font-style: italic;
 }
@@ -112,4 +112,17 @@
   content:'⟵';
   margin-right: 1rem;
   border-bottom: 0;
+}
+.white-space {
+  display: inline-block;
+  width: 30px;
+  height: 100%;
+}
+@media(min-width: 500px) and (max-width: 1200px) {
+  .post-content {
+    padding-left: 2rem;
+  }
+  .post-header {
+    padding-left: 2rem;
+  }
 }
