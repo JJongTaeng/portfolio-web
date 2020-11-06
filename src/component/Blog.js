@@ -65,7 +65,7 @@ const Blog = () => {
       setTagData('');
       return;
     }
-    const newPost = post.filter((elem, index, all)=>{
+    const newPost = basicPost.filter((elem, index, all)=>{
       return elem.tag.includes(tagData);
     })
     if(newPost.length===0) {
