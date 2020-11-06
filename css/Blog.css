@@ -156,6 +156,14 @@
   .blog-nav > div {
     flex-wrap: wrap;
   }
+  .blog-post-item {
+    width: calc(1125px / 3);
+    height: calc(1125px / 3);
+  }
+  .blog-post-back {
+    width: calc(1125px / 3);
+    height: calc(1125px / 3);
+  }
 }
 
 

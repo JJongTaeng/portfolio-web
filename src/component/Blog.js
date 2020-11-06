@@ -68,7 +68,10 @@ const Blog = () => {
     const newPost = post.filter((elem, index, all)=>{
       return elem.tag.includes(tagData);
     })
-    if(!newPost) return;
+    if(newPost.length===0) {
+      setTagData('');
+      return;
+    }
     setPost(newPost);
     setTagData('');
   }
@@ -85,7 +88,7 @@ const Blog = () => {
             <Link to="/" className="blog-header-link">소개</Link>
             <a href="https://github.com/jjongtaeng" className="blog-header-link">깃허브</a>
           </div>
-          <input type="search" value={tagData}  onKeyPress={onKeyPress} onChange={onChangeTagData} placeholder="태그이름 검색" className="blog-search-box"/>
+          <input type="search" value={tagData}  onKeyPress={onKeyPress} onChange={onChangeTagData} placeholder="전체 게시물 -> 내용없이 검색" className="blog-search-box"/>
           <input type="submit" onClick={onClick} value="검색" className="blog-search-submit"/>
         </div>
       </nav>
@@ -116,6 +119,10 @@ const Blog = () => {
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
+          @media (max-width: 500px) {
+            width: calc(1125px / 3);
+            height: calc(1125px / 3);
+          }
         `
         return (
         <div className="hover-scale">
