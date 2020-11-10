@@ -6,16 +6,18 @@ const Post_2 = ({post}) => {
   const content = {
     id: 2,
     date: '2020.11.06',
-    list : ['소개','webpack', 'babel','마무리'],
+    list : ['소개','webpack', 'babel','react','마무리'],
     titleImages: './post-2.png',
-    contentImages: ['','./webpack.png','./babel.png',''],
-    imageIndex: [false, true, true, false],
+    contentImages: ['','./webpack.png','./babel.png','',''],
+    imageIndex: [false, true, true, false,false],
     description: [
       `안녕하세요. 웹팩과 바벨로 CRA없이 리액트 개발 환경을 구성을 했습니다.
 
        기존에 만들어진 CRA는 제가 모르는 파일도 많고, 왜 이 파일이 필요하고 어떠한 역할을 하는 지 감이 안잡혔습니다.
 
-       "그러면!! CRA없이 리액트를 사용해보자!!" 라는 마음이 들었고, 웹팩과 바벨을 배워서 개발 환경을 구성해보았습니다.`,
+       "그러면!! CRA없이 리액트를 사용해보자!!" 라는 마음이 들었고, 웹팩과 바벨을 배워서 개발 환경을 구성해보았습니다.`
+      ,
+
       `웹팩은 여러가지 기능이 있지만 리액트를 구성하는데 중점적으로 하겠습니다. 
   
       일단 웹팩을 다운로드 하는 방법은 
@@ -119,6 +121,7 @@ const Post_2 = ({post}) => {
       
       플러그인 설정도 끝났으면 바벨로 넘어가겠습니다!!
       `,
+
       `브라우저의 종류와 버전마다 지원해주는 자바스크립트의 언어가 달라 일관적이지 못할 때가 많습니다.
 
       그것을 변환해주는 것이 바벨입니다. "트랜스파일"한다라고 표현합니다.
@@ -140,8 +143,23 @@ const Post_2 = ({post}) => {
         @@@@]
       @@}
        
-      바벨을 사용하여 리액트 코드를 변환하고 웹팩으로 번들링하여 파일으르 생성합니다. 그 파일이 직접 구성한 개발 환경에서 리액트를 사용한 파일입니다.
+      바벨을 사용하여 리액트 코드를 변환하고 웹팩으로 번들링하여 파일을 생성합니다. 그 파일이 직접 구성한 개발 환경에서 리액트를 사용한 파일입니다.
       `,
+
+      `리액트 파일을 설정해보겠습니다.
+      
+      엔트리 파일인 index.js에
+      
+      @@import React from "react"
+      @@import ReactDOM from "react-dom"
+      @@import {BrowserRouter} from 'react-router-dom' // 이건 리액트 라우터를 사용할 때만 사용해주면 됩니다.
+      @@import App from "./App"
+      @@
+      @@ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById("root"));
+      
+      index.html에 root 아이디를 갖는 엘리먼트를 작성해주면 됩니다.
+      
+      App.js 파일에 CRA App.js에 작성하듯이 리액트를 사용하여 코드를 작성하면 됩니다.`,
 
       `CRA에서는 더 다양한 기능을 제공해주지만 직접 개발환경을 구현하면서 알게된 부분들도 많았습니다.
       

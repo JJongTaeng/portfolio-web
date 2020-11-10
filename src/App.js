@@ -9,7 +9,7 @@ import { Route, Link } from 'react-router-dom';
 const App = () => {
   const [index, setIndex] = useState(1);
   return (
-    <div>    
+    <div className='app-page'>    
     <Route exact={true} path='/' render={()=>
     <div>
       <section className="header">

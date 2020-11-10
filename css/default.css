@@ -1,16 +1,20 @@
 @charset 'utf-8';
 html * {
-  font-family: 'Noto Sans KR', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 html {
 	line-height: 1.4;
 	word-wrap: break-word;
 	scroll-behavior: smooth;
+	min-height: 100vh;
 }
 body {
 	-webkit-font-smoothing: antialiased;
 	overflow-x: hidden;
+	min-height: 100vh;
 }
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
