@@ -6,9 +6,18 @@ import styled from 'styled-components';
 
 import Post_1 from './Post_1';
 import Post_2 from './Post_2';
+import Post_3 from './Post_3';
 const Blog = () => {
   const [tagData, setTagData] = useState('');
   const [post, setPost] = useState([
+    {
+      id: 3,
+      title: '비트컴퓨터 최종 발표와 입상!!',
+      date: '2020.11.13',
+      tag: ['bit', 'education','life'],
+      image: "/post-3.png",
+      link: '/blog/3'
+    },
     {
       id: 2,
       title: 'CRA 없이 리액트 개발환경 구현하기!!!!',
@@ -26,6 +35,14 @@ const Blog = () => {
     },
   ])
   const basicPost = [
+    {
+      id: 3,
+      title: '비트컴퓨터 최종 발표와 입상!!',
+      date: '2020.11.13',
+      tag: ['bit', 'education','life'],
+      image: "/post-3.png",
+      link: '/blog/3'
+    },
     {
       id: 2,
       title: 'CRA 없이 리액트 개발환경 구현하기!!!!',
@@ -147,6 +164,7 @@ const Blog = () => {
       }></Route>
       <Route path="/blog/1" render={()=><Post_1 post={post}/>}></Route>
       <Route path="/blog/2" render={()=><Post_2 post={post}/>}></Route>
+      <Route path="/blog/3" render={()=><Post_3 post={post}/>}></Route>
       <footer className="footer">
         <p className="git">github : <a href="https://github.com/JJongTaeng">Welcome JJongTaeng's github</a></p>
         <p className="made-by">made by JJongTaeng</p>
